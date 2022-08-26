@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+   <div class="content-section">
+    <h3>Dog or Cat? Well, this image is a <b>{{ label }}</span></b></h3>
+    <img src="{{ url_for('send_file', filename = filename)}}" style ="max-width: 500px; max-height: 450px; margin-top: 30px; margin-bottom: 10px">
+    <p style="font-style: italic">{{ filename }}</p>
+    <p><b>The precise CNN classification is: <span style="color: green;">{{ acc_dog }} % dog</span>
+          VS <span style="color: green;">{{ acc_cat }} % cat</span></b></p>
+     <a href="/">Back</a>
+   </div>
+{% endblock content %}

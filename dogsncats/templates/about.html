@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+   <div class="content-section">
+    <h3>About</h3>
+    <p> I am a Data Science student in the Artifical Intelligence Bootcamp organised by Becode.
+        The assignment that led to this web application was to build a binary classifier with a Convolutional Neural Network able to classify dog and cat images.</p>
+    <p> The CNN classifier for this application was built with Tensorflow/Keras and was trained, with data augmentation, on 25000 images from the Kaggle Dogs vs. Cats dataset. Its accuracy is about 85% but it does shows signs of overfitting.
+        I wanted to compare the results of this 'home made' CNN with another one, based on MobileNetV2, on which I performed feature extraction and finetuning but this was not possible due to server space limitations for deployment. But this 'home made' model is just as fun. ;-) </p> 
+    <p><a href="https://becode.org/">Find out more about Becode as an organization.</a></p>
+    <p><a href="https://becode.org/learn/ai-bootcamp/">Checkout Becode's AI bootcamp!</a></p>
+   </div>
+{% endblock content %}

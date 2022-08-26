@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+     <h3>Welcome to Dogs vs Cats!</h3>
+     <p> </p>
+     <p> Below you can upload an image of a cat or dog and a trained Convolutional Neural Network will classify the image as belonging to the appropriate category.</p>
+     <p> Go on and find out how smart this AI really is. Be gentle please and don't confuse my AI..its world exist solely out of dogs and cats.</p>
+     <p> Have fun!</p>
+     <form method="post" action="/upload" enctype="multipart/form-data" style="margin-top: 50px; width: 60%; text-align: center; margin: auto;"> 
+       <span class="text-right btn btn-default btn-file"> 
+           Upload image <input type="file" name="file" autocomplete="off" required>  
+       </span>	
+                        
+		</p>
+      
+                <p>
+		        <input type="submit" value="Dog or Cat?" class="btn btn-primary" >
+	        </p>
+      </form>
+      <p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                  <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+          {% endif %}
+        {% endwith %}
+      </p>
+    </div>
+    <div class="border-top pt-3">
+    </div>
+{% endblock content %}
